@@ -43,7 +43,7 @@ export default function TestApi() {
 
   return (
     <div className="container-fluid">
-      <h1 className="h2 text-center my-5 text-primary fw-bold">Cat facts</h1>
+      <h1 className="h2 text-center my-5 text-primary fw-bold">Cat Facts</h1>
       <div className="row text-center" style={{ backgroundColor: 'cyan', height: 'auto', width: '900px', margin: '0 auto', borderRadius: '15px' }}>
         {responseData ? (
           <div>
