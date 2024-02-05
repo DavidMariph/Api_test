@@ -27,14 +27,16 @@ export default function TestApi() {
     document.body.style.backgroundColor = bgColor;
   }
 
-  setInterval(randomColor, 3000)
+  // setInterval(randomColor, 3000)
   useEffect(() => {
-    fetchData()
+    fetchData();
 
   }, []);
 
   const handleRefreshClick = () => {
     fetchData();
+    randomColor();
+
   };
 
 
@@ -42,7 +44,7 @@ export default function TestApi() {
   return (
     <div className="container-fluid">
       <h1 className="h2 text-center my-5 text-primary fw-bold">Cat facts</h1>
-      <div className="row text-center" style={{ backgroundColor: 'cyan', height: '150px', width: '900px', margin: '0 auto', borderRadius: '15px' }}>
+      <div className="row text-center" style={{ backgroundColor: 'cyan', height: 'auto', width: '900px', margin: '0 auto', borderRadius: '15px' }}>
         {responseData ? (
           <div>
             <h2>Data received:</h2>
@@ -54,7 +56,7 @@ export default function TestApi() {
         )}
       </div>
       <div className="col text-center">
-        <button type="button" className="btn btn-primary my-5" onClick={handleRefreshClick}>
+        <button type="button" className="btn btn-primary my-5" onClick={handleRefreshClick} >
           Refresh
         </button>
       </div>
